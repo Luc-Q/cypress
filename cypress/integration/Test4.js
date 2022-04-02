@@ -8,9 +8,9 @@ describe("fourth test", () => {
         cy.get('[value="Confirm"]').click();
         // on: fiire an event and (things needs to compare)
         cy.on("window.alert", (str) => {
-            expect(str).to.equal(
-                "Hello, share this practice page and share your knowlege"
-            );
+            expect(str).to.equal("Hello, Are you sure you want to confirm?");
         });
+
+        cy.get("#opentab").invoke("removeAttr", "target").click();
     });
 });
