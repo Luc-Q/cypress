@@ -6,7 +6,7 @@ describe("fourth test", () => {
 
         cy.get("#alertbtn").click();
         cy.get('[value="Confirm"]').click();
-
+        // on: fiire an event and (things needs to compare)
         cy.on("window.alert", (str) => {
             expect(str).to.equal(
                 "Hello, share this practice page and share your knowlege"
